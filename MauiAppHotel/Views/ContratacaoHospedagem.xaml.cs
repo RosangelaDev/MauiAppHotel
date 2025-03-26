@@ -14,10 +14,10 @@ public partial class ContratacaoHospedagem : ContentPage
 		pck_quarto.ItemsSource = PropriedadesApp.lista_quartos;
 
 		dtpck_checkin.MinimumDate = DateTime.Now;
-		dtpck_checkin.MinimumDate = DateTime.Now.AddMonths(1);
+		dtpck_checkin.MaximumDate = DateTime.Now.AddMonths(1);
 
 		dtpck_checkin.MinimumDate = dtpck_checkin.Date.AddDays(1);
-		dtpck_checkin.MinimumDate = dtpck_checkin.Date.AddMonths(6);
+		dtpck_checkin.MaximumDate = dtpck_checkin.Date.AddMonths(6);
 	     }
 	private async void Button_Clicked(object sender, EventArgs e)
 	{
@@ -46,7 +46,7 @@ public partial class ContratacaoHospedagem : ContentPage
 		}
 	}
 
-	private void dtck_checkin_DateSelected(object sender, 
+	private void dtpck_checkin_DateSelected(object sender, 
 		DateChangedEventArgs e)
 	{
 		DatePicker elemento = sender as DatePicker;

@@ -24,7 +24,7 @@ namespace MauiAppHotel.Models
         {
             get
             {
-                double valor_adultos = QntAdultos * QuartoSelecionado.ValorDiariaAlduto;
+                double valor_adultos = QntAdultos * QuartoSelecionado.ValorDiariaAdulto;
                 double valor_criancas = QntCriancas * QuartoSelecionado.ValorDiariaCrianca;
 
                 double total = (valor_adultos + valor_criancas) * Estadia;
